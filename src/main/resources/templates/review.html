@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+<title>Make-up Review</title>
+
+</head>
+
+<body>
+
+	<header>
+		<h1>Make-up Review</h1>
+	</header>
+
+	 <h1 th:text="${review.title}"> </h1>
+	<section class = "container" >
+	<h2 th:text ="${'Category: '+review.category.title}"> </h2>
+	<p> <span  th:text="${'Content'+ review.description}">
+		<img th:src="${review.imageUrl}"></img> 
+	</span></p>
+		<p>Was this review helpful?</p>
+		</section>
+	
+</body>
+<footer>
+	<h5>
+		<a href="http://localhost:8080/reviews">Back to home</a>
+	</h5>
+</footer>
+</html>
