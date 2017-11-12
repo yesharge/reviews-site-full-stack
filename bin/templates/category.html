@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Category</title>
+</head>
+
+<body>
+	<header>
+	</header>
+	<ul>
+	<li th:each="cat: ${category.reviews}"> 
+	<h1 th:text="${cat.title}"></h1>
+	<p  th:text="${'Content'+ cat.description}"></p>
+		<img th:src="${cat.imageUrl}"></img> 
+		<p>Was this review helpful?</p>
+	</li>
+	</ul>
+	
+
+</body>
+</html>

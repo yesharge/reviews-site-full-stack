@@ -25,8 +25,9 @@ public class ReviewPopulator implements CommandLineRunner{
 		categoryRepo.save(tarte);
 		
 		reviewRepo.save(new Review ("Dip brow","Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\n" + 
-				"tempor incididunt ut labore et dolore magna aliqua.", "",anastasia));
-		reviewRepo.save(new Review("Foundation","Lorem ipsum dolor sit amet, consectetur adipisicing elit.","",tarte));
+				"tempor incididunt ut labore et dolore magna aliqua.", "/images/anastasia.jpg",anastasia));
+		reviewRepo.save(new Review("Foundation","Lorem ipsum dolor sit amet, consectetur adipisicing elit.","/images/anastasia.jpg",tarte));
+		reviewRepo.save(new Review("Foundation","Lorem ipsum dolor sit amet, consectetur adipisicing elit.","/images/anastasia.jpg",tarte));
 	}
 	
 }

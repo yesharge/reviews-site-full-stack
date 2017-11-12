@@ -16,6 +16,7 @@ public class Review {
 	@GeneratedValue
 	private Long reviewId;
 	private String title;
+	@Lob
 	private String imageUrl;
 	@Lob
 	private String description;

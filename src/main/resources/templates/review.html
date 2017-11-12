@@ -5,6 +5,8 @@
 <head>
 
 <title>Make-up Review</title>
+<link rel="stylesheet" type="text/css" href="style.css"></link>
+<link rel="stylesheet" type="text/css" href="layout.css"></link>
 
 </head>
 
@@ -17,9 +19,8 @@
 	 <h1 th:text="${review.title}"> </h1>
 	<section class = "container" >
 	<h2 th:text ="${'Category: '+review.category.title}"> </h2>
-	<p> <span  th:text="${'Content'+ review.description}">
+	<p  th:text="${'Content'+ review.description}"></p>
 		<img th:src="${review.imageUrl}"></img> 
-	</span></p>
 		<p>Was this review helpful?</p>
 		</section>
 	
