@@ -39,6 +39,7 @@ public class ReviewPopulator implements CommandLineRunner {
 		Tag lips = new Tag("lips");
 		tagRepo.save(lips);
 		Tag highlight = new Tag("highlight");
+		tagRepo.save(highlight);
 
 		reviewRepo.save(new Review("Dip brow",
 				"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\n"
@@ -49,18 +50,18 @@ public class ReviewPopulator implements CommandLineRunner {
 		reviewRepo.save(new Review("Eye Bright As Day", "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
 				"/images/tarte2.jpg", tarte, face));
 		reviewRepo.save(new Review("Highlight Seen From Space ",
-				"Lorem ipsum dolor sit amet, consectetur adipisicing elit.", "/images/becca2.jpg", becca, face));
+				"Lorem ipsum dolor sit amet, consectetur adipisicing elit.", "/images/becca2.jpg", becca, face,highlight));
 		reviewRepo.save(new Review("Eye Shadow For the Lazy",
 				"Lorem ipsum dolor sit amet, consectetur adipisicing elit.", "/images/lorac.jpg", lorac, face));
 		reviewRepo.save(new Review("Eye Shadow For the Mundane",
 				"Lorem ipsum dolor sit amet, consectetur adipisicing elit.", "/images/lorac2.jpg", lorac, face));
 		reviewRepo
 				.save(new Review("Highlight of the Night", "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-						"/images/trophywife.jpg", fentyBeauty, face));
+						"/images/trophywife.jpg", fentyBeauty, face,highlight));
 		reviewRepo.save(new Review("Dab on these Haters", "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
 				"/images/fentydab.jpg", fentyBeauty, face));
 		reviewRepo.save(new Review("Steal the Spotlight", "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-				"/images/fentysteal.jpg", fentyBeauty));
+				"/images/fentysteal.jpg", fentyBeauty,lips));
 		reviewRepo.save(new Review("Bold Lips", "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
 				"/images/narsbold.jpg", nars, lips));
 		reviewRepo.save(new Review("Warm Lips", "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",

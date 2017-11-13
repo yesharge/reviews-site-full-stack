@@ -194,6 +194,7 @@ li.dropdown {
 
 .reviews__title {
 	margin-top: 15px;
+	
 }
 
 .rev {
@@ -206,4 +207,24 @@ li.dropdown {
 	display: flex; justify-content : center;
 	align-items: center;
 	justify-content: center;
+}
+.tags {
+	display:flex;
+	}
+	.tag_in{
+	display:flex;
+	margin-right: 5px;
+	margin-left:5px;
+	
+	}
+	
+
+.review__title h2 {
+	margin-bottom:50px;
+	
+}
+.review__description p{
+	
+	padding-top: 20px;
+	margin-top:20px;
 }
