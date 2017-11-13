@@ -3,19 +3,18 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-<title>Genre</title>
+<title>Tag</title>
 </head>
 
 <body>
-	<header>
-	</header>
-		<h1 th:text="${tag.tagName}"> </h1>
+	<header> </header>
+	<h1 th:text="${tag.tagName}"></h1>
 	<ul>
-	<li th:each="review: ${tag.reviews}"> 
-	<p  th:text="${review.title}"></p>
-	</li>
+		<li th:each="review: ${tag.reviews}">
+			<p th:text="${review.title}"></p>
+		</li>
 	</ul>
-	
+
 
 </body>
 </html>

@@ -10,11 +10,13 @@
 	<header>
 		<h1>Tags</h1>
 	</header>
-	
-	
-<div th:each="tag: ${tags}">
-        <p><a th:href="@{/tag(id=${tag.tagId})}" th:text="${tag.tagName}"></a></p>
-    </div>
+
+
+	<div th:each="tag: ${tags}">
+		<p>
+			<a th:href="@{/tag(id=${tag.tagId})}" th:text="${tag.tagName}"></a>
+		</p>
+	</div>
 
 </body>
 </html>

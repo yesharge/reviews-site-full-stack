@@ -190,41 +190,46 @@ li.dropdown {
 
 .container3 img {
 	width: 3fr;
+	height: 200px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	'
 }
 
 .reviews__title {
-	margin-top: 15px;
-	
+	margin-top: 20px;
 }
 
 .rev {
-	display: flex; justify-content : center;
+	display: flex;
+	justify-content: center;
 	align-items: center;
 	justify-content: center;
 }
 
 .rev .container2 {
-	display: flex; justify-content : center;
+	display: flex;
+	justify-content: center;
 	align-items: center;
 	justify-content: center;
 }
+
 .tags {
-	display:flex;
-	}
-	.tag_in{
-	display:flex;
+	display: flex;
+}
+
+.tag_in {
+	display: flex;
 	margin-right: 5px;
-	margin-left:5px;
-	
-	}
-	
+	margin-left: 5px;
+	font-weight: bold;
+}
 
 .review__title h2 {
-	margin-bottom:50px;
-	
+	margin-bottom: 50px;
 }
-.review__description p{
-	
+
+.review__description p {
 	padding-top: 20px;
-	margin-top:20px;
+	margin-top: 20px;
 }

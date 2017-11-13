@@ -30,10 +30,12 @@
 			<div class="reviews__image">
 				<img th:src="${review.imageUrl}"></img>
 			</div>
-			<div class = "tags">
-			<p>Tags: </p>
-			<div class="tag_in" th:each="tagss: ${review.tags}"> 
-	<p th:text="${'  '+tagss.tagName+' '}"></p></div></div>
+			<div class="tags">
+				<p>Tags:</p>
+				<div class="tag_in" th:each="tagss: ${review.tags}">
+					<p th:text="${'  '+tagss.tagName+' '}"></p>
+				</div>
+			</div>
 
 		</div>
 	</div>
