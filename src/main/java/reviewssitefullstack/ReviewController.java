@@ -16,6 +16,10 @@ public class ReviewController {
 		@Resource
 		ReviewRepository reviewRepo;
 
+		@Resource
+		SubscriberRepository subscriberRepo = new SubscriberRepository();
+		@Resource
+		TagRepository tagRepo;
 		
 		@RequestMapping("/reviews")
 		public String getAllBooks (Model model) {
@@ -37,6 +41,23 @@ public class ReviewController {
 		public String getBooksByGenre(@RequestParam Long id, Model model) {
 			model.addAttribute("category", categoryRepo.findOne(id));
 			return "category";
+		}
+		@RequestMapping("/add-subscriber")
+		public String addSubscriber(String name, String email) {
+			Subscriber newSubscriber = new Subscriber(name,email);
+			subscriberRepo.addSubscriber(newSubscriber);
+			
+			return "redirect:/categories";
+		}
+		@RequestMapping("/tag")
+		public String findTag(@RequestParam Long id, Model model) {
+			model.addAttribute("tag",tagRepo.findOne(id));
+				return "tag";
+		}
+		@RequestMapping("/tags")
+		public String allTags(Model model) {
+			model.addAttribute("tags", tagRepo.findAll());
+			return "tags";
 		}
 		
 		

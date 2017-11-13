@@ -8,7 +8,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Lob;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+
+
 
 @Entity 
 public class Review {
@@ -26,14 +29,22 @@ public class Review {
 	@ManyToOne
 	private Category category;
 	
+	@ManyToMany
+	private  Set<Tag> tags = new HashSet<Tag>();
+	
 	protected Review() {}
 	
-	public Review(String title, String description, String imageUrl, Category category ) {
+	public Review(String title, String description, String imageUrl, Category category,Tag...tags ) {
 		this.title= title;
 		this.description = description;
 		this.category = category;
 		this.imageUrl= imageUrl;
+		this.tags = new HashSet<Tag>(Arrays.asList(tags));
 	}
+	public Set<Tag> getTags() {
+		return tags;
+	}
+
 	public Long getReviewId() {
 		return reviewId;
 	}
@@ -55,7 +66,7 @@ public class Review {
 
 	@Override
 	public String toString() {
-		return String.format("Review[title='%s', description='%s', imageUrl='%s',category='%s']", title, description, imageUrl, category);
+		return String.format("Review[title='%s', description='%s', imageUrl='%s',category='%s',tags='%s]", title, description, imageUrl, category,tags);
 }
 	
 	

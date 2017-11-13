@@ -5,7 +5,9 @@
 <head>
 
 <title>Make-up Review</title>
-
+<link rel="stylesheet" type="text/css" href="style.css"></link>
+<link rel="stylesheet" type="text/css" href="layout.css"></link>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
 </head>
 
 <body>
@@ -19,6 +21,8 @@
 	<h2 th:text ="${'Category: '+review.category.title}"> </h2>
 	<p  th:text="${'Content'+ review.description}"></p>
 		<img th:src="${review.imageUrl}"></img> 
+		<div th:each="tagss: ${review.tags}"> 
+	<p  th:text="${tagss.tagName}"></p></div>
 		<p>Was this review helpful?</p>
 		</section>
 	
