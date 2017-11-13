@@ -13,23 +13,23 @@ public class Category {
 	@Id
 	@GeneratedValue
 	private Long categoryId;
-	
+
 	private String title;
-	
-	@OneToMany(mappedBy="category")
-	private Set<Review>  reviews;
-	
-	protected Category() {}
+
+	@OneToMany(mappedBy = "category")
+	private Set<Review> reviews;
+
+	protected Category() {
+	}
 
 	public Category(String title) {
-		
-		this.title= title;
+
+		this.title = title;
 	}
 
 	public Long getCategoryId() {
 		return categoryId;
 	}
-
 
 	public Set<Review> getReviews() {
 		return reviews;
@@ -38,11 +38,10 @@ public class Category {
 	public String getTitle() {
 		return title;
 	}
+
 	@Override
 	public String toString() {
 		return String.format("Category[title='%s']", title);
-}
-	
+	}
 
-	
 }

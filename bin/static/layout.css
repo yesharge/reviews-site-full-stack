@@ -23,52 +23,61 @@ h1 {
 	margin: 0 auto;
 	max-width: 1000px;
 	padding: 16px 5px;
-		
 }
-.ad__one,.ad__two img {
-	margin-left:0;
-	grid-column:2/3;
-	display:flex;
+
+.container2 img {
+	width: 200px;;
+}
+
+.ad__one, .ad__two img {
+	margin-left: 0;
+	grid-column: 2/3;
+	display: flex;
 	flex-direction: column;
-	
+	justify-content: space-around;
+	padding: 10px 10px;
+	height: 200px;
+	width: auto;
+	object-fit: cover;
 }
-.indiv{
+
+.indiv {
 	margin: 20px;
-	display:grid;
+	display: grid;
 	grid-template-columns: 4fr 6fr;
 	grid-template-rows: 2fr auto 1fr;
-margin-bottom: 30px;
-border-bottom-style:solid;
-
-	
+	margin-bottom: 30px;
+	border-bottom-style: solid;
 }
+
 .review__image {
 	grid-column: 1/2;
-	grid-row:1/3;
+	grid-row: 1/3;
 }
+
 .review__title {
 	grid-column: 2/3;
 	grid-row: 1/2;
-	
 }
+
 .review__description {
-	grid-column:2/3;
-	grid-row:1/2;
+	grid-column: 2/3;
+	grid-row: 1/2;
 	padding: 40px 10px;
 }
+
 .rate {
 	grid-column: 2/3;
-	grid-row:3/4;
-	display:flex;
-	flex-direction:column;
-	justify-content:center;
-	align-items:center;
-	
+	grid-row: 3/4;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
+
 .review li a {
 	text-decoration: none;
 }
-
 
 article {
 	position: scroll;
@@ -96,7 +105,8 @@ footer img {
 }
 
 footer .copy__right {
-	display: flex; justify-content : center;
+	display: flex;
+	justify-content: center;
 	align-items: center;
 	justify-content: center;
 }
@@ -149,15 +159,10 @@ li.dropdown {
 	background-color: #f1f1f1
 }
 
-.ad__one, .ad__two img {
-	padding: 10px 10px;
-	height: auto;
-	object-fit: cover;
-}
-
 .dropdown:hover .dropdown-content {
 	display: block;
 }
+
 .rating {
 	unicode-bidi: bidi-override;
 	direction: rtl;
@@ -172,4 +177,33 @@ li.dropdown {
 .rating>span:hover:before, .rating>span:hover ~ span:before {
 	content: "\2605";
 	position: absolute;
+}
+
+.container3 {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	margin: 0 auto;
+	max-width: 1000px;
+	padding: 10px;
+	grid-column-gap: 20px;
+}
+
+.container3 img {
+	width: 3fr;
+}
+
+.reviews__title {
+	margin-top: 15px;
+}
+
+.rev {
+	display: flex; justify-content : center;
+	align-items: center;
+	justify-content: center;
+}
+
+.rev .container2 {
+	display: flex; justify-content : center;
+	align-items: center;
+	justify-content: center;
 }

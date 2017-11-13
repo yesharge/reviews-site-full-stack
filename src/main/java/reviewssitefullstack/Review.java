@@ -11,9 +11,7 @@ import javax.persistence.Lob;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 
-
-
-@Entity 
+@Entity
 public class Review {
 	@Id
 	@GeneratedValue
@@ -23,24 +21,24 @@ public class Review {
 	private String imageUrl;
 	@Lob
 	private String description;
-	
 
-	
 	@ManyToOne
 	private Category category;
-	
+
 	@ManyToMany
-	private  Set<Tag> tags = new HashSet<Tag>();
-	
-	protected Review() {}
-	
-	public Review(String title, String description, String imageUrl, Category category,Tag...tags ) {
-		this.title= title;
+	private Set<Tag> tags = new HashSet<Tag>();
+
+	protected Review() {
+	}
+
+	public Review(String title, String description, String imageUrl, Category category, Tag... tags) {
+		this.title = title;
 		this.description = description;
 		this.category = category;
-		this.imageUrl= imageUrl;
+		this.imageUrl = imageUrl;
 		this.tags = new HashSet<Tag>(Arrays.asList(tags));
 	}
+
 	public Set<Tag> getTags() {
 		return tags;
 	}
@@ -60,14 +58,15 @@ public class Review {
 	public Category getCategory() {
 		return category;
 	}
+
 	public String getImageUrl() {
 		return imageUrl;
 	}
 
 	@Override
 	public String toString() {
-		return String.format("Review[title='%s', description='%s', imageUrl='%s',category='%s',tags='%s]", title, description, imageUrl, category,tags);
-}
-	
-	
+		return String.format("Review[title='%s', description='%s', imageUrl='%s',category='%s',tags='%s]", title,
+				description, imageUrl, category, tags);
+	}
+
 }

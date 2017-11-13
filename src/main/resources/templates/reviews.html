@@ -6,17 +6,32 @@
 <title>A list of Reviews</title>
 <link rel="stylesheet" type="text/css" href="style.css"></link>
 <link rel="stylesheet" type="text/css" href="layout.css"></link>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+<link href="https://fonts.googleapis.com/css?family=Armata"
+	rel="stylesheet"></link>
 </head>
 
 <body>
 	<header>
 		<h1>All Reviews</h1>
 	</header>
+	<ul class="nav">
+		<li><a href="/categories">Home</a></li>
+		<li><a href="/reviews">All Reviews</a></li>
+	</ul>
+	<div class="container3">
+		<div th:each="review: ${reviews}">
+			<div class="reviews__title">
+				<h2>
+					<a th:href="@{/review(id=${review.reviewId})}"
+						th:text="${review.title}"></a>
+				</h2>
+			</div>
+			<div class="reviews__image">
+				<img th:src="${review.imageUrl}"></img>
+			</div>
 
-	<h3> <a href="/categories">Categories </a></h3>
-<div th:each="review: ${reviews}">
-        <a th:href="@{/review(id=${review.reviewId})}" th:text="${'Review Title: '+review.title+' Category: '+review.category.title}"></a>
-    </div>
-
+		</div>
+	</div>
 </body>
 </html>
